@@ -1,0 +1,65 @@
+<div class="relative bg-[#1a1a1a] overflow-hidden">
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="
+      background-image: url(https://images.unsplash.com/photo-1516742720271-6ae39cbc5bd1?auto=format&fit=crop&q=80&w=2940);
+      filter: brightness(0.6);
+    "
+  ></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="text-primary font-medium mb-4">
+          Dê o primeiro passo e descubra a paixão pelo tênis!
+        </div>
+        <h1
+          class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+        >
+          Comece agora mesmo sua jornada
+        </h1>
+        <div class="flex gap-4 mb-12">
+          <button
+            class="bg-white/10 text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition-colors flex items-center gap-2"
+          >
+            Ver lista de sites <i-lucide name="arrow-down-right" />
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bg-white/10 backdrop-blur-lg rounded-3xl p-6 space-y-4 max-w-md mx-auto"
+      >
+        <div class="flex items-center justify-between text-white mb-4">
+          <h3 class="font-medium">Baixe nosso app</h3>
+        </div>
+        <div class="flex justify-center gap-4 items-center">
+          <!-- App Store -->
+          <a href="#" class="hover:opacity-80 transition-opacity">
+            <img
+              src="assets/app-store-badge.svg"
+              alt="Download on App Store"
+              class="h-12"
+            />
+          </a>
+          <!-- Play Store -->
+          <a href="#" class="hover:opacity-80 transition-opacity">
+            <img
+              src="assets/play-store-badge.png"
+              alt="Get it on Google Play"
+              class="h-12"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 text-white/80">
+      <app-feature
+        *ngFor="let feature of features"
+        [title]="feature.title"
+        [description]="feature.description"
+      />
+    </div>
+  </div>
+</div>

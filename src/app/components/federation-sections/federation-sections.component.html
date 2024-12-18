@@ -1,0 +1,35 @@
+<div class="bg-[#1a1a1a] py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Confederations Section -->
+    <div class="mb-20">
+      <h2 class="text-3xl font-bold text-white mb-4">Confederações</h2>
+      <div class="h-1 w-20 bg-primary mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <app-federation-card
+          *ngFor="let confederation of confederations"
+          [name]="confederation.name"
+          [fullName]="confederation.fullName"
+          [logo]="confederation.logo"
+          [link]="confederation.link"
+        />
+      </div>
+    </div>
+
+    <!-- Federations Section -->
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-4">Federações</h2>
+      <div class="h-1 w-20 bg-primary mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <app-federation-card
+          *ngFor="let federation of federations"
+          [name]="federation.name"
+          [fullName]="federation.fullName"
+          [logo]="federation.logo"
+          [link]="federation.link"
+        />
+      </div>
+    </div>
+  </div>
+</div>

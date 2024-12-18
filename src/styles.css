@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #1a1a1a;
+}
+
+@layer utilities {
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+}
