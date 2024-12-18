@@ -1,25 +1,40 @@
-<div
-  class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col items-center"
->
-  <div
-    [class]="
-      'w-16 h-16 rounded-full overflow-hidden flex items-center justify-center mb-3 ' +
-      randomBgColor
-    "
-  >
-    <img
-      [src]="logo"
-      [alt]="name + ' logo'"
-      class="w-full h-full object-cover"
-      onerror="this.style.display='none'"
-    />
+<div class="group relative">
+  <!-- Hover Effect Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
+  
+  <!-- Card Content -->
+  <div class="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-all border border-white/10 group-hover:border-primary/20">
+    <div class="flex flex-col items-center">
+      <!-- Logo Container -->
+      <div class="relative mb-3">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
+        <div class="relative w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white">
+          <img
+            [src]="logo"
+            [alt]="name + ' logo'"
+            class="w-12 h-12 object-contain transition-transform group-hover:scale-110"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+
+      <!-- Federation Info -->
+      <h3 class="text-xl font-semibold text-white mb-2 text-center group-hover:text-primary transition-colors">
+        {{ name }}
+      </h3>
+      <p class="text-white/60 text-center text-sm mb-4">{{ fullName }}</p>
+
+      <!-- Link -->
+      <a
+        [href]="link"
+        class="inline-flex items-center text-white/60 hover:text-primary transition-colors font-medium group-hover:text-primary"
+      >
+        Visitar 
+        <i-lucide 
+          name="external-link" 
+          class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+        ></i-lucide>
+      </a>
+    </div>
   </div>
-  <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ name }}</h3>
-  <p class="text-gray-600 text-center text-sm mb-4">{{ fullName }}</p>
-  <a
-    [href]="link"
-    class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-  >
-    Visitar <i-lucide name="external-link" class="w-4 h-4 ml-1"></i-lucide>
-  </a>
 </div>
