@@ -25,12 +25,12 @@
     <div class="absolute top-0 left-3/4 w-px h-full bg-white"></div>
   </div>
 
-  <div class="relative py-24 bg-slate-900">
+  <div class="relative py-24 bg-slate-900" id="sites">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Confederations Section -->
       <app-section-header
-        title="Confederações"
-        subtitle="Conheça as principais confederações de tênis da América Latina"
+        [title]="'FEDERATIONS.CONFEDERATIONS_TITLE' | translate"
+        [subtitle]="'FEDERATIONS.CONFEDERATIONS_SUBTITLE' | translate"
       />
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
@@ -45,8 +45,8 @@
 
       <!-- Federations Section -->
       <app-section-header
-        title="Federações"
-        subtitle="Encontre a federação do seu estado e comece a jogar"
+        [title]="'FEDERATIONS.FEDERATIONS_TITLE' | translate"
+        [subtitle]="'FEDERATIONS.FEDERATIONS_SUBTITLE' | translate"
       />
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

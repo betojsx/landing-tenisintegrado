@@ -11,35 +11,23 @@
           </div>
           
           <p class="text-white/60 max-w-md">
-            Somos uma plataforma dedicada a conectar jogadores, clubes e federações de tênis em todo o Brasil. 
-            Nossa missão é tornar o tênis mais acessível e organizado para todos os amantes do esporte.
+            {{ 'FOOTER.ABOUT' | translate }}
           </p>
   
-          <div class="flex gap-4">
-            <a href="#" class="text-white/60 hover:text-white transition-colors">
-              <i-lucide name="facebook" class="w-5 h-5" />
-            </a>
-            <a href="#" class="text-white/60 hover:text-white transition-colors">
-              <i-lucide name="instagram" class="w-5 h-5" />
-            </a>
-            <a href="#" class="text-white/60 hover:text-white transition-colors">
-              <i-lucide name="twitter" class="w-5 h-5" />
-            </a>
-          </div>
         </div>
   
         <!-- Download Section -->
         <div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 space-y-6">
           <div class="space-y-2">
-            <h3 class="text-xl font-semibold text-white">Baixe nosso app</h3>
+            <h3 class="text-xl font-semibold text-white">{{ 'FOOTER.DOWNLOAD_TITLE' | translate }}</h3>
             <p class="text-white/60">
-              Tenha acesso a todas as funcionalidades na palma da sua mão
+              {{ 'FOOTER.DOWNLOAD_SUBTITLE' | translate }}
             </p>
           </div>
   
           <div class="flex flex-col sm:flex-row gap-4 items-center">
             <!-- App Store -->
-            <a href="#" class="hover:opacity-80 transition-opacity">
+            <a href="https://apps.apple.com/app/t%C3%AAnis-integrado/id1185848909" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
               <img
                 src="assets/app-store-badge.svg"
                 alt="Download on App Store"
@@ -47,7 +35,7 @@
               />
             </a>
             <!-- Play Store -->
-            <a href="#" class="hover:opacity-80 transition-opacity">
+            <a href="https://play.google.com/store/apps/details?id=br.com.tenisintegrado&hl=pt&pli=1" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
               <img
                 src="assets/play-store-badge.png"
                 alt="Get it on Google Play"
@@ -60,7 +48,7 @@
   
       <div class="mt-16 pt-8 border-t border-white/10">
         <div class="text-center text-white/40 text-sm">
-          © {{ currentYear }} Tênis Integrado. Todos os direitos reservados.
+          © {{ currentYear }} Tênis Integrado. {{ 'FOOTER.RIGHTS' | translate }}
         </div>
       </div>
     </div>

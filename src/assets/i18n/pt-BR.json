@@ -1,0 +1,42 @@
+{
+	"NAVIGATION": {
+		"CONTACT_US": "Contate-nos",
+		"LANGUAGE": "Idioma"
+	},
+	"HERO": {
+		"TAGLINE": "Dê o primeiro passo e descubra a paixão pelo tênis!",
+		"TITLE": "Comece agora mesmo sua jornada",
+		"VIEW_SITES": "Ver lista de sites",
+		"DOWNLOAD_APP": "Baixe nosso app",
+		"FEATURES": {
+			"ACCESSIBILITY": {
+				"TITLE": "Acessibilidade",
+				"DESCRIPTION": "Tênis para todos, independente da idade ou nível"
+			},
+			"COMMUNITY": {
+				"TITLE": "Comunidade",
+				"DESCRIPTION": "Conecte-se com outros jogadores"
+			},
+			"COMPETITIONS": {
+				"TITLE": "Competições",
+				"DESCRIPTION": "Participe de torneios e rankings"
+			},
+			"DEVELOPMENT": {
+				"TITLE": "Desenvolvimento",
+				"DESCRIPTION": "Evolua seu jogo com os melhores profissionais"
+			}
+		}
+	},
+	"FEDERATIONS": {
+		"CONFEDERATIONS_TITLE": "Confederações",
+		"CONFEDERATIONS_SUBTITLE": "Conheça as principais confederações de tênis da América Latina",
+		"FEDERATIONS_TITLE": "Federações",
+		"FEDERATIONS_SUBTITLE": "Encontre a federação do seu estado e comece a jogar"
+	},
+	"FOOTER": {
+		"ABOUT": "Somos uma plataforma dedicada a conectar jogadores, clubes e federações de tênis em toda a América Latina. Nossa missão é tornar o tênis mais acessível e organizado para todos os amantes do esporte.",
+		"DOWNLOAD_TITLE": "Baixe nosso app",
+		"DOWNLOAD_SUBTITLE": "Tenha acesso a todas as funcionalidades na palma da sua mão",
+		"RIGHTS": "Todos os direitos reservados."
+	}
+}

@@ -7,6 +7,13 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { FeatureComponent } from "./components/feature/feature.component";
 import { LucideAngularModule } from "lucide-angular";
 import { SectionHeaderComponent } from "./components/section-header/section-header";
+import { TranslateModule, TranslateLoader, TranslateService } from "@ngx-translate/core";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+
+export function HttpLoaderFactory(http: HttpClient) {
+	return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+}
 
 @Component({
 	selector: "app-root",
@@ -20,6 +27,8 @@ import { SectionHeaderComponent } from "./components/section-header/section-head
 		FooterComponent,
 		SectionHeaderComponent,
 		LucideAngularModule,
+		HttpClientModule,
+		TranslateModule,
 	],
 	template: `
 		<div class="min-h-screen ">
@@ -30,4 +39,9 @@ import { SectionHeaderComponent } from "./components/section-header/section-head
 		</div>
 	`,
 })
-export class AppComponent {}
+export class AppComponent {
+	constructor(private translate: TranslateService) {
+		translate.setDefaultLang("pt-BR");
+		translate.use("pt-BR");
+	}
+}
