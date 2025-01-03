@@ -27,15 +27,35 @@
 
   <div class="relative py-24 bg-slate-900" id="sites">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Country Selection -->
+      <div class="mb-12">
+        <div class="custom-scrollbar overflow-x-auto pb-4 -mb-4">
+          <div class="flex space-x-3 min-w-max px-1">
+            <button
+              *ngFor="let country of countries"
+              (click)="selectCountry(country.code)"
+              class="px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 backdrop-blur-lg"
+              [ngClass]="{
+                'bg-primary text-white shadow-lg shadow-primary/20': selectedCountry === country.code,
+                'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white': selectedCountry !== country.code
+              }"
+            >
+              <span class="font-bold">{{ country.code }}</span>
+              <span class="opacity-80">{{ country.name }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Confederations Section -->
       <app-section-header
-        [title]="'FEDERATIONS.CONFEDERATIONS_TITLE' | translate"
-        [subtitle]="'FEDERATIONS.CONFEDERATIONS_SUBTITLE' | translate"
+        [title]="'FEDERATIONS.CONFEDERATION_TITLE' | translate"
+        [subtitle]="'FEDERATIONS.CONFEDERATION_SUBTITLE' | translate"
       />
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
         <app-federation-card
-          *ngFor="let confederation of confederations"
+          *ngFor="let confederation of getFilteredConfederations()"
           [name]="confederation.name"
           [fullName]="confederation.fullName"
           [logo]="confederation.logo"
@@ -50,13 +70,29 @@
       />
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <app-federation-card
-          *ngFor="let federation of federations"
-          [name]="federation.name"
-          [fullName]="federation.fullName"
-          [logo]="federation.logo"
-          [link]="federation.link"
-        />
+        <ng-container *ngIf="getFilteredFederations().length > 0; else emptyState">
+          <app-federation-card
+            *ngFor="let federation of getFilteredFederations()"
+            [name]="federation.name"
+            [fullName]="federation.fullName"
+            [logo]="federation.logo"
+            [link]="federation.link"
+          />
+        </ng-container>
+        
+        <ng-template #emptyState>
+          <div class="col-span-full flex flex-col items-center justify-center py-16 px-4 text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+              <i-lucide name="loader-2" class="w-8 h-8 text-primary animate-spin"></i-lucide>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              {{ 'FEDERATIONS.EMPTY_STATE.TITLE' | translate }}
+            </h3>
+            <p class="text-white/60 max-w-md">
+              {{ 'FEDERATIONS.EMPTY_STATE.DESCRIPTION' | translate: { country: getCountryName() } }}
+            </p>
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

@@ -31,7 +31,13 @@
 		"CONFEDERATIONS_TITLE": "Confederaciones",
 		"CONFEDERATIONS_SUBTITLE": "Conoce las principales confederaciones de tenis de América Latina",
 		"FEDERATIONS_TITLE": "Federaciones",
-		"FEDERATIONS_SUBTITLE": "Encuentra la federación de tu estado y empieza a jugar"
+		"FEDERATIONS_SUBTITLE": "Encuentra la federación de tu estado y empieza a jugar",
+		"CONFEDERATION_TITLE": "Confederación",
+		"CONFEDERATION_SUBTITLE": "Entidad principal del país seleccionado",
+		"EMPTY_STATE": {
+			"TITLE": "Próximamente más federaciones",
+			"DESCRIPTION": "Estamos trabajando continuamente para agregar todas las federaciones de {{country}}. ¡Mantente atento a las novedades!"
+		}
 	},
 	"FOOTER": {
 		"ABOUT": "Somos una plataforma dedicada a conectar jugadores, clubes y federaciones de tenis en toda América Latina. Nuestra misión es hacer el tenis más accesible y organizado para todos los amantes del deporte.",
